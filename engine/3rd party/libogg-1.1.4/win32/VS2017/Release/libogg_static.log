@@ -1,0 +1,1 @@
+﻿D:\S.T.A.L.K.E.R. Call of Pripyat\src_forser\xray-16-main\code\engine\3rd party\libogg-1.1.4\win32\VS2017\libogg_static.vcxproj(103,5): error MSB4019: импортированный проект "D:\S.T.A.L.K.E.R. Call of Pripyat\src_forser\xray-16-main\code\engine\xray.props" не найден. Проверьте правильность выражения в объявлении Import "..\..\..\..\xray.props" и наличие файла на диске.
