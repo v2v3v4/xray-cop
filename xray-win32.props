@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <XBinOut>$(SolutionDir)..\..\binaries\Win32\$(Configuration)\</XBinOut>
+    <XTempOut>$(SolutionDir)..\..\Intermediate\Win32\$(Configuration)\$(ProjectName)\</XTempOut>
+    <XLibOut>$(SolutionDir)..\..\Libraries\Win32\$(Configuration)\</XLibOut>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir>$(XBinOut)</OutDir>
+    <IntDir>$(XTempOut)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalLibraryDirectories>$(XLibOut);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>$(XLibOut)\$(ProjectName).lib</ImportLibrary>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>_ALLOW_RTCc_IN_STL;_VC80_UPGRADE=0x0710;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="XBinOut">
+      <Value>$(XBinOut)</Value>
+    </BuildMacro>
+    <BuildMacro Include="XTempOut">
+      <Value>$(XTempOut)</Value>
+    </BuildMacro>
+    <BuildMacro Include="XLibOut">
+      <Value>$(XLibOut)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
